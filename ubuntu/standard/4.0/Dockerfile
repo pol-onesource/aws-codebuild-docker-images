@@ -468,6 +468,9 @@ RUN pyenv  global $PYTHON_38_VERSION
 RUN phpenv global $PHP_74_VERSION
 RUN rbenv  global $RUBY_27_VERSION
 
+#****************     AWS CDK   ****************************************************
+RUN npm install -g aws-cdk@1.56.0 
+
 # Configure SSH
 COPY ssh_config /root/.ssh/config
 COPY runtimes.yml /codebuild/image/config/runtimes.yml
